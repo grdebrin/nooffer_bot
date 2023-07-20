@@ -26,7 +26,7 @@ def get_random_phrase():
 def start(update, context):
     chat_id = update.effective_chat.id
     user_chat_ids[chat_id] = True  # Сохраняем chat_id пользователя в словаре
-    context.bot.send_message(chat_id=chat_id, text=f"Привет, {update.effective_user.first_name}! Я бот, который каждый день в 09:00 буду отправлять тебе слова поддержки, пока ты ищешь работу!")
+    context.bot.send_message(chat_id=chat_id, text=f"Привет, {update.effective_user.first_name}! Я бот, который каждый день в 09:00 (GMT+3) буду отправлять тебе слова поддержки, пока ты ищешь работу!")
 
 # Функция для отправки фразы каждый день в 09:00 по московскому времени
 def send_daily_phrase(context):
